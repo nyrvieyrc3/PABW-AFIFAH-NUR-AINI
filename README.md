@@ -17,7 +17,7 @@ Saya menggunakan AI untuk membantu memahami langkah pengerjaan
 dan menyusun contoh kode HTML.
 
 
-##Pertemuan 4 — Design token halaman profil
+## Pertemuan 4 — Design token halaman profil
 - Berkas gaya yang akan dibuat: tokens.css, base.css, layout.css, komponen.css, tema.css
 - Warna utama: #1D3A8C (biru), dipilih karena sederhana, profesional, dan nyaman dilihat.
 - Halaman menggunakan token warna, spasi, radius, bayangan, dan ukuran teks agar tampilan konsisten.
