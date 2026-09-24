@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koleksi Gaya Busana</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Koleksi Gaya Busana</h1>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#koleksi">Koleksi Busana</a></li>
+        <li><a href="#trend">Trend Gaya Busana</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="koleksi">
+      <h2>Koleksi Busana</h2>
+
+      <table>
+        <caption>Daftar Koleksi Gaya Busana</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Nama Busana</th>
+            <th scope="col">Jenis Busana</th>
+            <th scope="col">Warna Dominan</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Kemeja Putih</td>
+            <td>Atasan</td>
+            <td>Putih</td>
+          </tr>
+
+          <tr>
+            <td>Blazer Hitam</td>
+            <td>Atasan</td>
+            <td>Hitam</td>
+          </tr>
+
+          <tr>
+            <td>Celana Jeans Biru</td>
+            <td>Bawahan</td>
+            <td>Biru</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <img
+          src="koleksi-busana.jpg"
+          alt="Contoh koleksi gaya busana dengan berbagai jenis dan warna"
+          width="400"
+          height="300"
+          loading="lazy">
+
+        <figcaption>
+          Contoh koleksi gaya busana untuk berbagai kesempatan.
+        </figcaption>
+      </figure>
+
+    </section>
+
+
+    <section id="trend">
+      <h2>Trend Gaya Busana</h2>
+
+      <p>
+        Gaya busana dapat disesuaikan dengan jenis kegiatan,
+        warna, dan kesempatan.
+      </p>
+
+      <form action="/simpan" method="post">
+
+        <p>
+          <label for="nama">Nama</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            required>
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+        </p>
+
+        <p>
+          <label for="pesan">Pesan</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            required></textarea>
+        </p>
+
+        <button type="submit">Kirim</button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <footer id="tentang">
+    <p>Afifah Nur Aini · NIM 25523083 · 2026</p>
+  </footer>
+
+</body>
+
+</html>
