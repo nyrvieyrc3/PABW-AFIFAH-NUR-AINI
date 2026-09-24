@@ -19,13 +19,18 @@
     pointer-events: none;
 }
 
+.tombol-tema { 
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
 /* Pilihan manual */
-:root:has(#tema:checked) {
-    --color-bg: #0F172A;
-    --color-fg: #E2E8F0;
-    --color-surface: #1E293B;
-    --color-border: #334155;
-    --color-primary: #7DA9F7;
-    --color-danger: #FF8A8A;
-    --color-focus: #FFC000;
+:root:has(#tema:not(:checked)) {
+    --color-bg: #F8FAFC;
+    --color-fg: #0F172A;
+    --color-surface: #FFFFFF;
+    --color-border: #D1D5DB;
+    --color-primary: var(--blue-700);
+    --color-danger: #B00020;
+    --color-focus: var(--blue-500);
 }

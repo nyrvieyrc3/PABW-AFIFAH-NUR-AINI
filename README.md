@@ -45,3 +45,6 @@ dan menyusun contoh kode HTML.
 | --text-3xl | 2.25rem | judul utama |
 
 Kriteria selesai saya: mengubah --color-primary di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
+
+## Catatan Pengunaan AI
+ memahami materi, menjelaskan konsep CSS, dan membantu menyusun jawaban. Seluruh kode dan hasil akhir tetap diperiksa dan disesuaikan dengan kebutuhan
