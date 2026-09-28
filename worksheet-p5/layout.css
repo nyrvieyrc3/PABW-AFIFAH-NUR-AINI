@@ -56,3 +56,40 @@ footer {
     color: var(--color-fg);
     font-size: var(--text-sm);
 }
+
+.page {
+    display: grid;
+    grid-template-rows: 
+    auto 1fr auto;
+    min-height: 100dvh;
+}
+
+.navbar {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+.isi {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-areas:
+    "sisi utama"
+    "sisi bawah";
+}
+
+.sisi{
+    grid-area: sisi;
+}
+
+.utama {
+    grid-area: utama;
+}
+
+.sorotan {
+    grid-column: span 2;
+}
+
+.papan {
+    grid-row: span 2;
+}
