@@ -62,3 +62,12 @@ const urut = [...daftarProyek].sort((a, b) => a.nama.localeCompare(b.nama));
 
 console.table(urut);
 console.table(daftarProyek);
+
+console.log(profil.nama);
+
+const elemen = document.querySelector("h1");
+console.log(elemen.textContent);
+
+const nilaiInput = "10";
+
+console.log(Number(nilaiInput) + 5);
