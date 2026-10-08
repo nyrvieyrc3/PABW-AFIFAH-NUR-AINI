@@ -71,9 +71,3 @@ console.log(elemen.textContent);
 const nilaiInput = "10";
 
 console.log(Number(nilaiInput) + 5);
-
-const salinanProfil = { ...profil };
-salinanProfil.nama = "Ayu";
-
-console.log(profil.nama);
-console.log(salinanProfil.nama);
