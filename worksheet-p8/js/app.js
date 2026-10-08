@@ -26,23 +26,39 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
-console.log(
-  buatPerkenalan({
-    nama: "Ayu",
-    peran: "Mahasiswa Informatika",
-  }),
-);
+const daftarProyek = [
+  {
+    nama: "Kemeja Putih",
+    kategori: "Atasan",
+    warna: "Putih",
+  },
+  {
+    nama: "Blazer Hitam",
+    kategori: "Atasan",
+    warna: "Hitam",
+  },
+  {
+    nama: "Celana Jeans Biru",
+    kategori: "Bawahan",
+    warna: "Biru",
+  },
+];
 
-console.log(
-  buatPerkenalan({
-    nama: "Salwa",
-    peran: "Desainer Web",
-  }),
-);
+console.table(daftarProyek);
 
-console.log(
-  buatPerkenalan({
-    nama: "Afifah",
-    peran: "Pengembang Web",
-  }),
-);
+const namaProyek = daftarProyek.map((proyek) => proyek.nama);
+
+console.log(namaProyek);
+
+const atasan = daftarProyek.filter((proyek) => proyek.kategori === "Atasan");
+
+console.table(atasan);
+
+const blazer = daftarProyek.find((proyek) => proyek.nama === "Blazer Hitam");
+
+console.log(blazer);
+
+const urut = [...daftarProyek].sort((a, b) => a.nama.localeCompare(b.nama));
+
+console.table(urut);
+console.table(daftarProyek);
