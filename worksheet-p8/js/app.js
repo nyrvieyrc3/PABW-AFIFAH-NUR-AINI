@@ -16,3 +16,33 @@ console.log(`Kelas: ${kelas}`);
 
 const kota = profil.alamat?.kota;
 console.log(`Kota: ${kota ?? "Belum diisi"}`);
+
+function buatPerkenalan({ nama, peran }) {
+  return `${nama} — ${peran}`;
+}
+
+const formatKeahlian = (daftar) => daftar.join(" · ");
+
+console.log(buatPerkenalan(profil));
+console.log(formatKeahlian(profil.keahlian));
+
+console.log(
+  buatPerkenalan({
+    nama: "Ayu",
+    peran: "Mahasiswa Informatika",
+  }),
+);
+
+console.log(
+  buatPerkenalan({
+    nama: "Salwa",
+    peran: "Desainer Web",
+  }),
+);
+
+console.log(
+  buatPerkenalan({
+    nama: "Afifah",
+    peran: "Pengembang Web",
+  }),
+);
