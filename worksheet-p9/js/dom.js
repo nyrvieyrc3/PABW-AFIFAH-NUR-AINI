@@ -24,7 +24,12 @@ function buatKartu(proyek) {
 function render(daftar) {
   wadah.textContent = "";
 
-  pesanKosong.hidden = daftar.length > 0;
+  if (daftar.length === 0) {
+    pesanKosong.hidden = false;
+    return;
+  }
+
+  pesanKosong.hidden = true;
 
   daftar.forEach((proyek) => {
     wadah.append(buatKartu(proyek));
