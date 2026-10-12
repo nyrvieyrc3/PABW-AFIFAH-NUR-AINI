@@ -26,7 +26,7 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
-const daftarProyek = [
+export const daftarProyek = [
   {
     nama: "Kemeja Putih",
     kategori: "Atasan",
