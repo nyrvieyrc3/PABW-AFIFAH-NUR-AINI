@@ -58,3 +58,10 @@ memahami materi, menjelaskan konsep CSS, dan membantu menyusun jawaban. Seluruh 
 ## catattan penggunaan AI
 
 Membantu dalam memahami materi JavaScript ES6+, mencari contoh penggunaan sintaks, dan membantu memahami kesalahan saat debugging kode, pengujian, dan hasil pengerjaan pada website saya kerjakan dan uji sendiri.
+
+## Pertemuan 9 - DOM, Event, dan Interaktivitas
+
+## catattan penggunaan AI
+
+Konsultasi untuk memahami alur penanganan galat (_debugging_ pesan error pada console), cara penulisan struktur _event delegation_ yang benar, serta penyusunan format dokumentasi laporan praktikum.
+yang dikerjakan sendiri:\*\* Perancangan struktur HTML profil (`profil.html`), penulisan logika JavaScript (`js/dom.js` dan `js/app.js`) untuk pemilihan elemen.
