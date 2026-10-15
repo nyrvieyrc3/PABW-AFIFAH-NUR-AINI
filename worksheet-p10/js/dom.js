@@ -1,7 +1,23 @@
-import { daftarProyek } from "./app.js";
-
 const wadah = document.querySelector(".katalog");
 const pesanKosong = document.querySelector("#kosong");
+const pesanMuat = document.querySelector("#muat");
+
+let semuaProyek = [];
+
+export function aturMemuat(status) {
+  if (pesanMuat) {
+    pesanMuat.hidden = !status;
+  }
+}
+
+export function tampilkanGalat(pesan) {
+  wadah.textContent = "";
+
+  if (pesanKosong) {
+    pesanKosong.hidden = false;
+    pesanKosong.textContent = pesan;
+  }
+}
 
 function buatKartu(proyek) {
   const kartu = document.createElement("article");
@@ -21,19 +37,28 @@ function buatKartu(proyek) {
   return kartu;
 }
 
-function render(daftar) {
+export function render(daftar) {
   wadah.textContent = "";
 
   if (daftar.length === 0) {
-    pesanKosong.hidden = false;
+    if (pesanKosong) {
+      pesanKosong.hidden = false;
+      pesanKosong.textContent = "Belum ada data.";
+    }
     return;
   }
 
-  pesanKosong.hidden = true;
+  if (pesanKosong) {
+    pesanKosong.hidden = true;
+  }
 
   daftar.forEach((proyek) => {
     wadah.append(buatKartu(proyek));
   });
+}
+
+export function simpanSemuaProyek(daftar) {
+  semuaProyek = daftar;
 }
 
 function tandaiTombolAktif(tombolAktif) {
@@ -42,20 +67,20 @@ function tandaiTombolAktif(tombolAktif) {
   });
 }
 
-render(daftarProyek);
-
 const barisFilter = document.querySelector("#filter");
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
-  if (!tombol) return;
+if (barisFilter) {
+  barisFilter.addEventListener("click", (event) => {
+    const tombol = event.target.closest("button");
+    if (!tombol) return;
 
-  const kategori = tombol.dataset.kategori;
+    const kategori = tombol.dataset.kategori;
 
-  const terpilih = daftarProyek.filter(
-    (proyek) => kategori === "semua" || proyek.kategori === kategori,
-  );
+    const terpilih = semuaProyek.filter(
+      (proyek) => kategori === "semua" || proyek.kategori === kategori,
+    );
 
-  render(terpilih);
-  tandaiTombolAktif(tombol);
-});
+    render(terpilih);
+    tandaiTombolAktif(tombol);
+  });
+}

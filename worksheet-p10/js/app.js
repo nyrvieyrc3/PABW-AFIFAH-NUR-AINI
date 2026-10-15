@@ -26,48 +26,30 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
-export const daftarProyek = [
-  {
-    nama: "Kemeja Putih",
-    kategori: "Atasan",
-    warna: "Putih",
-  },
-  {
-    nama: "Blazer Hitam",
-    kategori: "Atasan",
-    warna: "Hitam",
-  },
-  {
-    nama: "Celana Jeans Biru",
-    kategori: "Bawahan",
-    warna: "Biru",
-  },
-];
 
-console.table(daftarProyek);
+import { ambilProyek } from "./api.js";
+import {
+  render,
+  simpanSemuaProyek,
+  tampilkanGalat,
+  aturMemuat,
+} from "./dom.js";
 
-const namaProyek = daftarProyek.map((proyek) => proyek.nama);
+async function muat() {
+  aturMemuat(true);
 
-console.log(namaProyek);
+  try {
+    const data = await ambilProyek();
+    simpanSemuaProyek(data);
+    render(data);
+  } catch (galat) {
+    tampilkanGalat(
+      "Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.",
+    );
+    console.error(galat.message);
+  } finally {
+    aturMemuat(false);
+  }
+}
 
-const atasan = daftarProyek.filter((proyek) => proyek.kategori === "Atasan");
-
-console.table(atasan);
-
-const blazer = daftarProyek.find((proyek) => proyek.nama === "Blazer Hitam");
-
-console.log(blazer);
-
-const urut = [...daftarProyek].sort((a, b) => a.nama.localeCompare(b.nama));
-
-console.table(urut);
-console.table(daftarProyek);
-
-console.log(profil.nama);
-
-const elemen = document.querySelector("h1");
-console.log(elemen.textContent);
-
-const nilaiInput = "10";
-
-console.log(Number(nilaiInput) + 5);
+muat();
