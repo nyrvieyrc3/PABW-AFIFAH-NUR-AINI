@@ -1,18 +1,20 @@
 [
- {
+  {
+    "id": 1,
     "nama": "Kemeja Putih",
     "kategori": "Atasan",
     "warna": "Putih"
   },
   {
+    "id": 2,
     "nama": "Blazer Hitam",
     "kategori": "Atasan",
     "warna": "Hitam"
   },
   {
+    "id": 3,
     "nama": "Celana Jeans Biru",
     "kategori": "Bawahan",
     "warna": "Biru"
   }
 ]
-

@@ -10,3 +10,11 @@ export function buatPerkenalan({ nama, peran }) {
 }
 
 export const formatKeahlian = (daftar) => daftar.join(" · ");
+
+export function saring(daftar, kategori) {
+  if (kategori === "semua") {
+    return daftar;
+  }
+
+  return daftar.filter((item) => item.kategori === kategori);
+}

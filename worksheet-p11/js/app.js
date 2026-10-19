@@ -1,26 +1,22 @@
 import { ambilProyek } from "./api.js";
-import {
-  render,
-  simpanSemuaProyek,
-  tampilkanGalat,
-  aturMemuat,
-} from "./dom.js";
+import { isiProyek, state } from "./state.js";
+import { render, aturMemuat, tampilkanGalat } from "./dom.js";
+import { pasangEvent } from "./events.js";
 
-async function muat() {
+async function mulai() {
+  pasangEvent();
   aturMemuat(true);
 
   try {
-    const data = await ambilProyek();
-    simpanSemuaProyek(data);
-    render(data);
-  } catch (galat) {
-    tampilkanGalat(
-      "Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.",
-    );
-    console.error(galat.message);
+    const daftar = await ambilProyek();
+    isiProyek(daftar);
+    render(state);
+  } catch (error) {
+    tampilkanGalat("Gagal memuat data proyek.");
+    console.error(error);
   } finally {
     aturMemuat(false);
   }
 }
 
-muat();
+mulai();
