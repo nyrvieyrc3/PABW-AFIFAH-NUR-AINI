@@ -17,6 +17,7 @@ export function isiProyek(daftar) {
 
 export function ubahKategori(kategori) {
   state.kategoriAktif = kategori;
+  simpan(state);
   render(state);
 }
 
@@ -24,6 +25,7 @@ export function tambahFavorit(id) {
   if (state.favorit.includes(id)) return;
 
   state.favorit = [...state.favorit, id];
+  simpan(state);
   render(state);
 }
 

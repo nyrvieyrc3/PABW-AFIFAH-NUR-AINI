@@ -1,4 +1,4 @@
-import { tambahFavorit, ubahKategori } from "./state.js";
+import { tambahFavorit, ubahKategori, aturUlang } from "./state.js";
 
 export function pasangEvent() {
   const katalog = document.querySelector(".katalog");
