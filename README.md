@@ -65,3 +65,12 @@ Membantu dalam memahami materi JavaScript ES6+, mencari contoh penggunaan sintak
 
 Konsultasi untuk memahami alur penanganan galat (_debugging_ pesan error pada console), cara penulisan struktur _event delegation_ yang benar, serta penyusunan format dokumentasi laporan praktikum.
 yang dikerjakan sendiri:\*\* Perancangan struktur HTML profil (`profil.html`), penulisan logika JavaScript (`js/dom.js` dan `js/app.js`) untuk pemilihan elemen.
+
+
+## Pertemuan 11 
+Modul, State, dan Penyimpanan Klien
+### Pengungkapan Penggunaan AI
+
+Dalam pengerjaan worksheet PABW Pertemuan 11, saya menggunakan AI untuk membantu memahami materi modul JavaScript, memeriksa kesalahan kode, dan memberikan saran perbaikan pada implementasi penyimpanan data menggunakan `localStorage`.
+
+Saya mengerjakan sendiri penulisan dan penyesuaian kode pada proyek, menjalankan serta menguji aplikasi di browser, memperbaiki kesalahan yang ditemukan, dan memastikan fitur berjalan sesuai instruksi worksheet.
