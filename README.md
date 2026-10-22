@@ -74,3 +74,13 @@ Modul, State, dan Penyimpanan Klien
 Dalam pengerjaan worksheet PABW Pertemuan 11, saya menggunakan AI untuk membantu memahami materi modul JavaScript, memeriksa kesalahan kode, dan memberikan saran perbaikan pada implementasi penyimpanan data menggunakan `localStorage`.
 
 Saya mengerjakan sendiri penulisan dan penyesuaian kode pada proyek, menjalankan serta menguji aplikasi di browser, memperbaiki kesalahan yang ditemukan, dan memastikan fitur berjalan sesuai instruksi worksheet.
+
+## Pertemuan 12 
+Build Tooling, npm, dan Framework SPA
+## Pengungkapan Penggunaan AI
+saya menggunakan AI (ChatGPT) sebagai bantuan untuk memahami konsep Vue, menjelaskan perbedaan npm run dev dan npm run preview, serta membantu mengatasi kendala saat menjalankan build dan mengisi dokumentasi worksheet.
+
+Saya mengerjakan sendiri proses konfigurasi proyek, menjalankan perintah di terminal, menguji aplikasi melalui browser, memeriksa hasil build, dan mengambil screenshot sebagai bukti pengerjaan.
+
+Saya bertanggung jawab atas hasil akhir kode dan memastikan aplikasi berjalan sesuai instruksi worksheet.
+
