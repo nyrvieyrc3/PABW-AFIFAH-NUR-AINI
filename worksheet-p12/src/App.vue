@@ -1,30 +1,33 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, watch } from "vue";
 import { profil } from "./data.js";
-import { isiProyek } from "./state.js";
+import { state, simpan, muat, pulihkan, isiProyek } from "./state.js";
+import { ambilProyek } from "./api.js";
 
 import KepalaProfil from "./components/KepalaProfil.vue";
 import TombolFilter from "./components/TombolFilter.vue";
 import DaftarProyek from "./components/DaftarProyek.vue";
 
 onMounted(async () => {
-  const response = await fetch("/data/proyek.json");
-  const daftar = await response.json();
-  isiProyek(daftar);
+  pulihkan(muat());
+
+  try {
+    isiProyek(await ambilProyek());
+  } catch (galat) {
+    state.galat = "Data gagal dimuat. Periksa koneksi, lalu muat ulang.";
+  } finally {
+    state.memuat = false;
+  }
 });
+
+watch(state, (nilai) => simpan(nilai), { deep: true });
 </script>
 
 <template>
   <KepalaProfil :profil="profil" />
 
-  <div>
-    <h1>Koleksi Gaya Busana</h1>
-  </div>
+  <h1>Koleksi Gaya Busana</h1>
 
   <TombolFilter />
   <DaftarProyek />
 </template>
-
-<style scoped>
-/* Biarkan kosong karena CSS sudah diimpor di main.js */
-</style>

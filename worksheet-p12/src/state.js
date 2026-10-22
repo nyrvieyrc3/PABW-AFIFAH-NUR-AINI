@@ -4,6 +4,8 @@ export const state = reactive({
   daftarProyek: [],
   kategoriAktif: "semua",
   favorit: [],
+  memuat: true,
+  galat: "",
 });
 
 export function ambilState() {

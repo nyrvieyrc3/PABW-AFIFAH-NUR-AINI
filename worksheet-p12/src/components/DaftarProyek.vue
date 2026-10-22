@@ -7,9 +7,18 @@ const daftarTampil = () => saring(state.daftarProyek, state.kategoriAktif);
 
 <template>
   <div>
-    <p v-if="daftarTampil().length === 0">Belum ada data.</p>
+    <p v-if="state.memuat">Memuat data...</p>
 
-    <article v-for="proyek in daftarTampil()" :key="proyek.id" class="kartu">
+    <p v-else-if="state.galat">{{ state.galat }}</p>
+
+    <p v-else-if="daftarTampil().length === 0">Belum ada data.</p>
+
+    <article
+      v-else
+      v-for="proyek in daftarTampil()"
+      :key="proyek.id"
+      class="kartu"
+    >
       <h3>{{ proyek.nama }}</h3>
       <p>Jenis: {{ proyek.kategori }}</p>
       <p>Warna: {{ proyek.warna }}</p>
